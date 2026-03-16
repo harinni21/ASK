@@ -29,7 +29,7 @@ demod = lpf(ask * carrier, fc, fs)
 decoded = (demod[::fs//br] > 0.25).astype(int)
 # Plot
 plt.figure(figsize=(10,9))
-plt.suptitle("NAME : ATCHAYA V\nREG NO : 212224060031",
+plt.suptitle("NAME : HARINNI S\nREG NO : 212224060093",
              fontsize=12, fontweight='bold')   
 plt.subplot(4,1,1)
 plt.plot(t, msg)
@@ -76,7 +76,7 @@ dec = [(np.sum(d2[i*bd:(i+1)*bd]**2) >
         np.sum(d1[i*bd:(i+1)*bd]**2)) for i in range(br)]
 demod = np.repeat(dec, bd)
 plt.figure(figsize=(10,10))
-plt.suptitle("NAME : ATCHAYA V\nREG NO : 212224060031",
+plt.suptitle("NAME : HARINNI S\nREG NO : 212224060093",
              fontsize=12, fontweight='bold')   
 plt.subplot(5,1,1); plt.plot(t, msg); plt.title("Message Signal")
 plt.subplot(5,1,2); plt.plot(t, c1); plt.title("Carrier f1 (bit 0)")
@@ -87,6 +87,7 @@ plt.tight_layout(rect=[0,0,1,0.93])
 plt.show()
 ```
 # ASK Output Waveform
+<img src="https://img.sanishtech.com/u/addec23b811cf024fb7fe313b9270140.png" alt="download (1)" width="978" height="887" loading="lazy" style="max-width:100%;height:auto;">
 
 # FSK Output Waveform
 <img src="https://img.sanishtech.com/u/bf12be3226cf0bf049fbd656d156a50c.png" alt="download" width="989" height="985" loading="lazy" style="max-width:100%;height:auto;">
